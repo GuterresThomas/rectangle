@@ -1,17 +1,20 @@
-enum IpAddrKind {
-    v4,
-    v6,
-}
 
 
 
 fn main () {
-    let four = IpAddrKind::v4;
-    let six: IpAddrKind = IpAddrKind::v6;
+    enum Message {
+        Quit,
+        Move {x: i32, y: i32},
+        Write(String),
+        ChangeColor(i32, i32, i32),
+    }
+    impl Message {
+        fn call(&self) {
+            
+        }
+    }
 
-    route(IpAddrKind::v4);
-    route(IpAddrKind::v6);
+    let m = Message::Write(String::from("Hello"));
 
 }
 
-fn route(ip_kind: IpAddrKind) {}
